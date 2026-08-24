@@ -1,0 +1,30 @@
+@page { size: A4; margin: 12mm 18mm; }
+:root { --ink: #2a2a28; --muted: rgba(42,42,40,.62); --line: rgba(42,42,40,.22); }
+* { box-sizing: border-box; }
+html { color: var(--ink); background: #fff; font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif; font-size: 9.5pt; line-height: 1.6; }
+body { margin: 0; }
+.document { max-width: 174mm; margin: 0 auto; }
+.header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:9mm; }
+.brand { width:25mm; height:auto; }
+.meta { text-align:right; color:var(--muted); font-size:8.5pt; line-height:1.8; }
+h1 { margin:0 0 7mm; font-size:22pt; font-weight:500; letter-spacing:.12em; }
+.parties { display:grid; grid-template-columns:1fr 58mm; gap:16mm; margin-bottom:7mm; }
+.client { font-size:15pt; border-bottom:.4mm solid var(--ink); padding-bottom:3mm; }
+.issuer { font-size:8.8pt; line-height:1.75; }
+.summary { margin:5mm 0 6mm; padding:3mm 0; border-top:.35mm solid var(--ink); border-bottom:.35mm solid var(--ink); }
+.summary span { display:block; color:var(--muted); font-size:8.5pt; }
+.summary strong { display:block; margin-top:1mm; font-size:22pt; font-weight:500; }
+.project { margin-bottom:4mm; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; }
+th, td { padding:2.1mm 2mm; border-bottom:.25mm solid var(--line); vertical-align:top; overflow-wrap:anywhere; }
+th { color:var(--muted); font-size:8.5pt; font-weight:500; text-align:left; }
+.num { text-align:right; font-size:8.5pt; }
+.totals { width:86mm; margin:4mm 0 0 auto; }
+.totals th, .totals td { padding:2.2mm 1mm; }
+.totals tr:last-child { font-size:13pt; font-weight:600; }
+h2 { margin:5mm 0 2mm; font-size:10pt; letter-spacing:.08em; }
+ul { margin:0; padding-left:5mm; }
+.note { color:var(--muted); font-size:8.7pt; }
+footer { margin-top:6mm; color:var(--muted); font-size:8pt; text-align:center; }
+@media screen { body { padding:18mm; background:#ececea; } .document { padding:18mm; background:#fff; box-shadow:0 2mm 8mm rgba(0,0,0,.08); } }
+@media print { .document { max-width:none; } footer { display:none; } }

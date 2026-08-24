@@ -1,0 +1,31 @@
+@page { size: A4; margin: 10mm 18mm; }
+:root { --ink: #2a2a28; --muted: rgba(42,42,40,.62); --line: rgba(42,42,40,.22); }
+* { box-sizing: border-box; }
+html { color:var(--ink); background:#fff; font-family:"Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif; font-size:9pt; line-height:1.52; }
+body { margin:0; }
+.document { max-width:174mm; margin:0 auto; }
+.header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:5mm; }
+.brand { width:25mm; height:auto; }
+.meta { text-align:right; color:var(--muted); font-size:8.5pt; line-height:1.8; }
+h1 { margin:0 0 4mm; font-size:21pt; font-weight:500; letter-spacing:.12em; }
+.parties { display:grid; grid-template-columns:1fr 58mm; gap:16mm; margin-bottom:4mm; }
+.client { font-size:15pt; border-bottom:.4mm solid var(--ink); padding-bottom:3mm; }
+.issuer { font-size:8.8pt; line-height:1.75; }
+.summary { margin:3mm 0 4mm; padding:2mm 0; border-top:.35mm solid var(--ink); border-bottom:.35mm solid var(--ink); }
+.summary span { display:block; color:var(--muted); font-size:8.5pt; }
+.summary strong { display:block; margin-top:1mm; font-size:20pt; font-weight:500; }
+table { width:100%; border-collapse:collapse; table-layout:fixed; }
+th, td { padding:1.4mm 2mm; border-bottom:.25mm solid var(--line); vertical-align:top; overflow-wrap:anywhere; }
+th { color:var(--muted); font-size:8.5pt; font-weight:500; text-align:left; }
+.num { text-align:right; font-size:8.5pt; }
+.totals { width:86mm; margin:2.5mm 0 0 auto; }
+.totals th, .totals td { padding:1.4mm 1mm; }
+.totals tr:last-child { font-size:13pt; font-weight:600; }
+h2 { margin:3mm 0 1.5mm; font-size:10pt; letter-spacing:.08em; }
+.bank { display:grid; grid-template-columns:34mm 1fr; width:100mm; margin:0; }
+.bank dt, .bank dd { margin:0; padding:1mm 0; border-bottom:.25mm solid var(--line); }
+.bank dt { color:var(--muted); }
+.note { color:var(--muted); font-size:8.7pt; }
+footer { margin-top:6mm; color:var(--muted); font-size:8pt; text-align:center; }
+@media screen { body { padding:18mm; background:#ececea; } .document { padding:18mm; background:#fff; box-shadow:0 2mm 8mm rgba(0,0,0,.08); } }
+@media print { .document { max-width:none; } footer { display:none; } }

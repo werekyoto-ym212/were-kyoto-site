@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>請求書</title><link rel="stylesheet" href="print.css"></head>
+<body><main class="document">
+  <header class="header"><img class="brand" src="../../logo/were-logo-dark.svg" alt="were."><div class="meta">請求書番号 {{INVOICE_NUMBER}}<br>発行日 {{ISSUE_DATE}}<br>支払期限 {{PAYMENT_DUE_DATE}}</div></header>
+  <h1>請求書</h1>
+  <section class="parties"><div><div class="client">{{CLIENT_NAME}} 御中</div><p>案件名：{{PROJECT_NAME}}</p></div><div class="issuer"><strong>were.</strong><br>{{CREATOR_NAME}}<br>{{CREATOR_ADDRESS}}<br>{{CREATOR_EMAIL}}<br>{{CREATOR_PHONE}}</div></section>
+  <p>下記のとおりご請求申し上げます。</p>
+  <section class="summary"><span>ご請求金額</span><strong>{{GRAND_TOTAL}}</strong></section>
+  <table aria-label="請求内訳"><colgroup><col style="width:54%"><col style="width:12%"><col style="width:16%"><col style="width:18%"></colgroup><thead><tr><th>請求内容</th><th class="num">数量</th><th class="num">単価</th><th class="num">金額</th></tr></thead><tbody>
+    <tr><td>{{BILLING_DESCRIPTION}}<br><span class="note">例：Webサイト制作費（着手金50%）／Webサイト制作費（残金50%）</span></td><td class="num">{{QUANTITY}}</td><td class="num">{{UNIT_PRICE}}</td><td class="num">{{AMOUNT}}</td></tr>
+    <tr><td>{{ADDITIONAL_ITEM}}</td><td class="num">{{ADDITIONAL_QTY}}</td><td class="num">{{ADDITIONAL_UNIT_PRICE}}</td><td class="num">{{ADDITIONAL_AMOUNT}}</td></tr>
+  </tbody></table>
+  <table class="totals"><tbody><tr><th>ご請求金額</th><td class="num">{{GRAND_TOTAL}}</td></tr></tbody></table>
+  <h2>振込先</h2><dl class="bank"><dt>銀行名</dt><dd>{{BANK_NAME}}</dd><dt>支店名</dt><dd>{{BRANCH_NAME}}</dd><dt>口座種別</dt><dd>{{ACCOUNT_TYPE}}</dd><dt>口座番号</dt><dd>{{ACCOUNT_NUMBER}}</dd><dt>口座名義</dt><dd>{{ACCOUNT_HOLDER}}</dd></dl>
+  <h2>備考</h2><p class="note">振込手数料はお客様にてご負担ください。<br>{{PAYMENT_NOTE}}<br>例：着手金は入金確認後に制作を開始します。残金は入金確認後に本番公開します。</p>
+  <footer>were. — Invoice</footer>
+</main></body></html>
