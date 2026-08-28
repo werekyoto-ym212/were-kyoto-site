@@ -1,33 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="were.は京都を拠点に、小さな事業やお店のためのWebサイト・ホームページ制作を行っています。デザイン、スマートフォン対応、公開、基本SEOまで対応します。"
-  >
-
-  <title>were. | 京都のWeb制作・ホームページ制作</title>
-
+  <meta name="description" content="were.は京都を拠点に、店舗・個人サロンのホームページ制作、独自予約システム、顧客管理・カルテを一体で設計します。見た目だけで終わらない、お店のためのWebをつくります。">
+  <title>were. | 京都のWeb制作・独自予約システム</title>
   <link rel="canonical" href="https://were-kyoto.com/">
-
   <link rel="icon" href="/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-
   <meta property="og:type" content="website">
-  <meta property="og:title" content="were. | 京都のWeb制作・ホームページ制作">
-  <meta property="og:description" content="were.は京都を拠点に、小さな事業やお店のためのWebサイト・ホームページ制作を行っています。デザイン、スマートフォン対応、公開、基本SEOまで対応します。">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:title" content="were. | 京都のWeb制作・独自予約システム">
+  <meta property="og:description" content="京都の店舗・個人サロンへ。ホームページ制作から独自予約システム、顧客管理・カルテまで、お店に合わせて設計します。">
   <meta property="og:url" content="https://were-kyoto.com/">
   <meta property="og:image" content="https://were-kyoto.com/images/ogp.jpg">
   <meta property="og:site_name" content="were.">
   <meta name="twitter:card" content="summary_large_image">
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -35,777 +25,113 @@
     "name": "were.",
     "url": "https://were-kyoto.com/",
     "email": "were.kyoto@gmail.com",
-    "areaServed": "Kyoto",
-    "description": "were.は京都を拠点に、小さな事業やお店のためのWebサイト・ホームページ制作を行っています。デザイン、スマートフォン対応、公開、基本SEOまで対応します。",
+    "areaServed": { "@type": "AdministrativeArea", "name": "京都府" },
+    "description": "京都を拠点に、店舗・個人サロンのWebサイト制作、独自予約システム、顧客管理・カルテを設計・制作します。",
     "serviceType": [
-      "Web Design",
-      "Website Development",
-      "Homepage Production"
+      "Webサイト・ホームページ制作",
+      "独自予約システム開発",
+      "顧客管理・来店カルテシステム開発",
+      "Webサイト保守・運用支援"
     ],
     "image": "https://were-kyoto.com/images/ogp.jpg"
   }
   </script>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-  <!-- ========================
-       HEADER
-  ========================= -->
-  <header class="header">
-
+  <header class="header" data-header>
     <a href="#top" class="header-logo" aria-label="were. トップへ">
-      <img src="logo/were-logo-dark.svg" alt="were.">
+      <img class="logo-dark" src="logo/were-logo-dark.svg" alt="were.">
+      <img class="logo-light" src="logo/were-logo-white.svg.svg" alt="" aria-hidden="true">
     </a>
-
-    <nav class="header-nav" aria-label="メインナビゲーション">
-      <a href="#works">WORKS</a>
-      <a href="#plan">PLAN</a>
-      <a href="#profile">ABOUT</a>
-      <a href="#contact">CONTACT</a>
+    <nav id="main-nav" class="header-nav" aria-label="メインナビゲーション">
+      <a href="#service">SERVICE</a><a href="#case">CASE</a><a href="#about">ABOUT</a><a href="#price">PRICE</a><a href="#contact">CONTACT</a>
     </nav>
-
-    <button
-      class="menu-toggle"
-      type="button"
-      aria-label="メニューを開く"
-      aria-expanded="false"
-    >
-      <span></span>
-      <span></span>
-    </button>
-
+    <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
   </header>
 
   <main id="top">
-
-    <!-- ========================
-         01 — HERO
-    ========================= -->
-    <section class="hero">
-
+    <section class="hero theme-dark" data-header-theme="dark">
       <div class="hero-slides" aria-hidden="true">
-        <img src="images/ccccc.jpg" alt="" class="hero-slide hero-slide-first">
-        <img src="images/top.jpg" alt="" class="hero-slide hero-slide-second">
-        <img src="images/top２.jpg" alt="" class="hero-slide hero-slide-third">
+        <img src="images/ccccc.jpg" alt="" class="hero-slide hero-slide-first" width="1814" height="1200" fetchpriority="high">
+        <img src="images/top.jpg" alt="" class="hero-slide hero-slide-second" width="1813" height="1205" loading="lazy">
+        <img src="images/top２.jpg" alt="" class="hero-slide hero-slide-third" width="1821" height="1203" loading="lazy">
       </div>
-
-      <div class="hero-brand">
-        <img src="logo/were-logo-dark.svg" alt="were.">
+      <div class="hero-shade"></div>
+      <div class="hero-content shell">
+        <p class="eyebrow">WEB DESIGN &amp; SYSTEM / KYOTO</p>
+        <h1>京都の店舗・個人サロン向け<br>Web制作・予約システム</h1>
+        <p class="hero-copy">Webサイトも、予約の仕組みも。<br>お店に合わせて、ひとつずつ。</p>
+        <p class="hero-sub">京都を拠点に、Webサイト制作から独自予約システム、顧客管理まで。<br>見た目だけで終わらない、お店のためのWebをつくります。</p>
+        <div class="hero-actions"><a class="button button-light" href="#contact">制作について相談する</a><a class="text-link text-link-light" href="#case">制作事例を見る <span>↓</span></a></div>
       </div>
-
+      <p class="hero-services">WEBSITE <span>/</span> RESERVATION <span>/</span> CUSTOMER MANAGEMENT</p>
     </section>
 
-
-    <!-- ========================
-         02 — CONCEPT
-    ========================= -->
-    <section id="concept" class="concept section">
-
-      <p class="section-number">
-        02 — CONCEPT
-      </p>
-
-      <div class="concept-lead">
-        <p class="concept-lead-en">
-          Websites for<br>
-          small businesses.
-        </p>
-
-        <p class="concept-lead-ja">
-          その仕事らしさが伝わる<br>
-          Webサイトを。
-        </p>
+    <section id="service" class="service theme-light" data-header-theme="light">
+      <div class="shell section-pad">
+        <div class="section-head"><p class="eyebrow">01 — WHAT WE DO</p><h2>見せるだけじゃなく、<br>使えるWebへ。</h2></div>
+        <div class="service-grid">
+          <article><p class="service-en">WEBSITE</p><h3>Webサイト制作</h3><p>その仕事らしさが伝わる構成とデザインを考え、スマートフォン対応、基本SEO、公開まで一貫して制作します。</p></article>
+          <article><p class="service-en">RESERVATION</p><h3>独自予約システム</h3><p>ネイルサロンや美容サロンなど、個人サロンの運用に合わせた予約の仕組みを設計します。既製サービスでは届かない部分も、一緒に整理します。</p></article>
+          <article><p class="service-en">CUSTOMER MANAGEMENT</p><h3>顧客管理・カルテ</h3><p>予約後の顧客情報や来店履歴、カルテまで。日々の仕事で本当に使える管理画面を、必要な範囲からつくります。</p></article>
+        </div>
+        <a class="text-link" href="#contact">必要なものから相談する <span>↗</span></a>
       </div>
-
-      <div class="concept-heading">
-        <h2>
-          その仕事を<br>
-          知ることから。
-        </h2>
-      </div>
-
-      <div class="concept-content">
-
-        <div class="concept-block">
-          <p>
-            Webサイトに必要なものは、<br>
-            仕事やお店によって、それぞれ違います。
-          </p>
-        </div>
-
-        <div class="concept-block">
-          <p>
-            だから、決まったかたちに当てはめるのではなく、<br>
-            まずは、その仕事を知ることから。
-          </p>
-        </div>
-
-        <div class="concept-block">
-          <p>
-            大切にしていること。<br>
-            伝えたいこと。<br>
-            今、困っていること。
-          </p>
-        </div>
-
-        <div class="concept-block">
-          <p>
-            ひとつずつ整理しながら、<br>
-            その仕事らしさがきちんと伝わる<br>
-            Webサイトをつくります。
-          </p>
-        </div>
-
-        <div class="concept-block concept-block-large">
-          <p>
-            Webのことが<br>
-            よく分からなくても、<br>
-            大丈夫です。
-          </p>
-
-          <p class="concept-sub">
-            何が必要なのか分からないところから、<br>
-            一緒に考えます。
-          </p>
-        </div>
-
-        <div class="concept-block">
-          <p>
-            ただ言われたものをつくるのではなく、<br>
-            もう少し良くできないかを考える。
-          </p>
-        </div>
-
-        <div class="concept-finale">
-          <p class="concept-message">
-            「思っていたより、いい。」
-          </p>
-
-          <p>
-            そう思ってもらえる仕事を。
-          </p>
-        </div>
-
-      </div>
-
     </section>
 
-
-    <!-- ========================
-         03 — WORKS
-    ========================= -->
-    <section id="works" class="works section">
-
-      <p class="section-number">
-        03 — WORKS
-      </p>
-
-      <div class="works-heading">
-
-        <div>
-          <h2>sophie kyoto</h2>
-
-          <p class="works-category">
-            PRIVATE NAIL SALON / KYOTO
-          </p>
+    <section id="case" class="case theme-dark" data-header-theme="dark">
+      <div class="shell section-pad">
+        <div class="case-heading"><div><p class="eyebrow">02 — CASE 01</p><p class="case-name">SOPHIE KYOTO / PRIVATE NAIL SALON</p></div><h2>予約から、<br>体験をつくる。</h2></div>
+        <div class="case-visual">
+          <figure class="case-pc"><img src="images/sophie-pc-optimized.webp" alt="Sophie KyotoのWebサイトと予約導線のPC画面" width="2456" height="2500" loading="lazy" decoding="async"></figure>
+          <figure class="case-mobile"><img src="images/sophie-mobile-optimized.webp" alt="Sophie Kyotoのスマートフォン画面" width="800" height="3200" loading="lazy" decoding="async"></figure>
         </div>
-
-        <p class="works-count">
-          01 / 01
-        </p>
-
-      </div>
-
-
-      <div class="works-visual">
-        <div class="works-shot works-shot-pc">
-          <img src="images/sophie-pc.png" alt="Sophie Kyoto WebサイトのPC表示">
-        </div>
-
-        <div class="works-shot works-shot-mobile">
-          <img src="images/sophie-mobile.png" alt="Sophie Kyoto Webサイトのスマートフォン表示">
+        <div class="case-detail">
+          <p class="case-lead">Webサイト、予約、顧客管理、<br>来店カルテまでをひとつの流れに。</p>
+          <div><p>京都のプライベートネイルサロン Sophie Kyoto。サロンの静かな空気を伝えるWebサイトと、予約受付から顧客管理、来店後のカルテまでを一体で設計しました。</p><p>お客様にとっての分かりやすさと、運営する人にとっての使いやすさ。その両方を、ひとつの体験として考えています。</p><p class="case-tags">WEB DESIGN / DEVELOPMENT / RESERVATION<br>CUSTOMER MANAGEMENT / VISIT RECORD / SEO</p><a class="text-link text-link-light" href="https://sophie-kyoto.com/" target="_blank" rel="noopener noreferrer">SOPHIE KYOTOを見る <span>↗</span></a></div>
         </div>
       </div>
-
-
-      <div class="works-info">
-
-        <div class="works-description">
-
-          <p>
-            静かで落ち着いたサロンの空気感を大切に、<br>
-            余白と写真を活かしたWebサイトを制作。
-          </p>
-
-          <p>
-            デザインからスマートフォン対応、<br>
-            LINEを利用した予約導線、公開・基本SEO設定まで。
-          </p>
-
-        </div>
-
-        <div class="works-meta">
-
-          <p>
-            WEB DESIGN / DEVELOPMENT<br>
-            RESPONSIVE / RESERVATION / SEO
-          </p>
-
-          <a
-            href="https://sophie-kyoto.com/"
-            class="text-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            VIEW WEBSITE ↗
-          </a>
-
-        </div>
-
-      </div>
-
     </section>
 
-
-    <!-- ========================
-         04 — PLAN
-    ========================= -->
-    <section id="plan" class="plan section">
-
-      <p class="section-number">
-        04 — PLAN
-      </p>
-
-      <div class="plan-list">
-
-        <article class="plan-item">
-          <button class="plan-trigger" type="button" aria-expanded="false" aria-controls="plan-light">
-            <span class="plan-name">Light</span>
-          </button>
-
-          <div class="plan-panel" id="plan-light">
-            <div class="plan-panel-inner">
-              <p class="plan-price">¥69,800〜</p>
-
-              <div class="plan-detail">
-                <p class="plan-detail-title">まずは、必要なものをシンプルに。</p>
-
-                <p class="plan-detail-copy">
-                  名刺代わりになるWebサイトや、<br>
-                  必要な情報をコンパクトにまとめたい方向け。
-                </p>
-
-                <p class="plan-detail-label">含まれるもの：</p>
-
-                <ul class="plan-detail-list">
-                  <li>スマートフォン対応</li>
-                  <li>オリジナルデザイン</li>
-                  <li>基本SEO設定</li>
-                  <li>OGP設定</li>
-                  <li>お問い合わせ・SNSなどへの導線</li>
-                  <li>ドメイン接続・公開サポート</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </article>
-
-
-        <article class="plan-item">
-          <button class="plan-trigger" type="button" aria-expanded="false" aria-controls="plan-standard">
-            <span class="plan-name">Standard</span>
-          </button>
-
-          <div class="plan-panel" id="plan-standard">
-            <div class="plan-panel-inner">
-              <p class="plan-price">¥99,800〜</p>
-
-              <div class="plan-detail">
-                <p class="plan-detail-title">その仕事らしさまで、しっかり伝える。</p>
-
-                <p class="plan-detail-copy">
-                  情報を載せるだけでなく、<br>
-                  構成や見せ方から考えて、<br>
-                  事業やお店の雰囲気まで伝えたい方向け。
-                </p>
-
-                <p class="plan-detail-label">LIGHTの内容に加えて：</p>
-
-                <ul class="plan-detail-list">
-                  <li>サイト構成の設計</li>
-                  <li>コンテンツごとの見せ方</li>
-                  <li>写真を活かしたレイアウト</li>
-                  <li>より細かなレスポンシブ調整</li>
-                  <li>必要な導線設計</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-        </article>
-
-
-        <article class="plan-item">
-          <button class="plan-trigger" type="button" aria-expanded="false" aria-controls="plan-custom">
-            <span class="plan-name">Custom</span>
-          </button>
-
-          <div class="plan-panel" id="plan-custom">
-            <div class="plan-panel-inner">
-              <p class="plan-price">¥149,800〜</p>
-
-              <div class="plan-detail">
-                <p class="plan-detail-title">必要なものに合わせて、もう一歩先まで。</p>
-
-                <p class="plan-detail-copy">
-                  一般的なWebサイトの形に収まらない<br>
-                  機能や構成が必要な方向け。
-                </p>
-
-                <p class="plan-detail-label">STANDARDの内容に加えて：</p>
-
-                <ul class="plan-detail-list">
-                  <li>予約導線・フォーム</li>
-                  <li>独自の動きやインタラクション</li>
-                  <li>ページ数の多い構成</li>
-                  <li>特殊なレイアウト・機能など</li>
-                </ul>
-
-                <p class="plan-detail-note">補足：<br>内容に応じて個別にお見積もりします。</p>
-              </div>
-            </div>
-          </div>
-
-        </article>
-
-
-        <article class="plan-item plan-item-option">
-          <button class="plan-trigger" type="button" aria-expanded="false" aria-controls="plan-option">
-            <span class="plan-name">OPTION</span>
-          </button>
-
-          <div class="plan-panel" id="plan-option">
-            <div class="plan-panel-inner plan-panel-inner-option">
-              <dl class="plan-option-list">
-                <div class="plan-option-row">
-                  <dt>ページ追加</dt>
-                  <dd>¥11,000〜 / page</dd>
-                </div>
-
-                <div class="plan-option-row">
-                  <dt>お問い合わせフォーム</dt>
-                  <dd>¥11,000〜</dd>
-                </div>
-
-                <div class="plan-option-row">
-                  <dt>予約機能・システム連携</dt>
-                  <dd>¥16,500〜</dd>
-                </div>
-
-                <div class="plan-option-row">
-                  <dt>写真撮影</dt>
-                  <dd>¥22,000〜</dd>
-                </div>
-
-                <div class="plan-option-row">
-                  <dt>文章作成・リライト</dt>
-                  <dd>¥11,000〜</dd>
-                </div>
-
-                <div class="plan-option-row">
-                  <dt>多言語対応</dt>
-                  <dd>¥22,000〜</dd>
-                </div>
-
-                <div class="plan-option-row">
-                  <dt>特殊なアニメーション・機能</dt>
-                  <dd>¥11,000〜</dd>
-                </div>
-
-                <div class="plan-option-row">
-                  <dt>その他</dt>
-                  <dd>ご相談ください</dd>
-                </div>
-              </dl>
-            </div>
-          </div>
-
-        </article>
-
-
-        <article class="plan-item plan-item-maintenance">
-          <button class="plan-trigger" type="button" aria-expanded="false" aria-controls="plan-maintenance">
-            <span class="plan-name">MAINTENANCE</span>
-          </button>
-
-          <div class="plan-panel" id="plan-maintenance">
-            <div class="plan-panel-inner">
-              <p class="plan-price">¥3,300 / month</p>
-
-              <div class="plan-detail">
-                <p class="plan-detail-title">公開したあとも、必要なときに。</p>
-
-                <p class="plan-detail-copy">
-                  サイト公開後のちょっとした変更や、<br>
-                  日々の管理をサポートします。
-                </p>
-
-                <p class="plan-detail-label">含まれるもの：</p>
-
-                <ul class="plan-detail-list">
-                  <li>テキストの軽微な変更</li>
-                  <li>画像の差し替え</li>
-                  <li>リンク先の変更</li>
-                  <li>サイトの表示・動作確認</li>
-                  <li>軽微な不具合修正</li>
-                  <li>月30分程度までの更新作業</li>
-                </ul>
-
-                <p class="plan-detail-note">
-                  ※ 新しいページの追加、レイアウト変更、機能追加などは<br>
-                  メンテナンス対象外となり、別途お見積もりとなります。<br><br>
-                  ※ ドメイン・サーバー等の利用料金は含まれません。
-                </p>
-              </div>
-            </div>
-          </div>
-
-        </article>
-
+    <section id="about" class="about theme-light" data-header-theme="light">
+      <div class="shell section-pad">
+        <div class="section-head about-head"><p class="eyebrow">03 — WHY WERE.</p><h2>その仕事を<br>知ることから。</h2><p>何が必要なのか分からないところから、一緒に考えます。</p></div>
+        <div class="values">
+          <article><p class="value-number">01</p><p class="service-en">DESIGN FOR YOU</p><h3>その仕事らしい形を。</h3><p>決まった形に当てはめず、大切にしていること、伝えたいこと、今困っていることを整理します。</p></article>
+          <article><p class="value-number">02</p><p class="service-en">WEB + SYSTEM</p><h3>見た目と仕組みを、一緒に。</h3><p>ホームページ制作だけでなく、予約や顧客管理まで。お客様とお店、双方の使いやすさをつなげます。</p></article>
+          <article><p class="value-number">03</p><p class="service-en">AFTER LAUNCH</p><h3>公開したあとも。</h3><p>更新や改善、日々の小さな困りごとにも対応。公開を完成ではなく、運用の始まりとして考えます。</p></article>
+          <article><p class="value-number">04</p><p class="service-en">SECURITY</p><h3>運用を前提に設計する。</h3><p>2段階認証、アクセス制御、バックアップなど、扱う情報と運用に合わせて必要な対策を設計します。</p></article>
+        </div>
+        <blockquote>ただ言われたものをつくるのではなく、<br>もう少し良くできないかを考える。</blockquote>
       </div>
-
-
-      <div class="plan-notes">
-        <p>ALL PRICES INCLUDE TAX.</p>
-        <p>DOMAIN / EXTERNAL SERVICE FEES ARE NOT INCLUDED.</p>
-      </div>
-
     </section>
 
-
-    <!-- ========================
-         05 — FLOW
-    ========================= -->
-    <section id="flow" class="flow section">
-
-      <p class="section-number">
-        05 — FLOW
-      </p>
-
-      <div class="flow-intro">
-
-        <h2>
-          一緒に考える。<br>
-          おまかせでも。
-        </h2>
-
-      </div>
-
-
-      <div class="flow-layout">
-
-        <!-- 左：工程 -->
-        <div class="flow-steps">
-
-          <article class="flow-step" data-step="1">
-
-            <p class="flow-number">
-              01 — TALK
-            </p>
-
-            <h3>
-              話を聞く。
-            </h3>
-
-            <p>
-              Webサイトを作りたい理由や、<br>
-              今困っていることを整理します。
-            </p>
-
-          </article>
-
-
-          <article class="flow-step" data-step="2">
-
-            <p class="flow-number">
-              02 — PLAN
-            </p>
-
-            <h3>
-              整理する。
-            </h3>
-
-            <p>
-              必要なページや機能、<br>
-              サイト全体の方向性を決めます。<br><br>
-              こだわりたいことがあれば、一緒に。
-            </p>
-
-          </article>
-
-
-          <article class="flow-step" data-step="3">
-
-            <p class="flow-number">
-              03 — DESIGN
-            </p>
-
-            <h3>
-              かたちにする。
-            </h3>
-
-            <p>
-              仕事やお店の雰囲気に合わせて、<br>
-              見た目と構成をつくります。<br><br>
-              まだイメージが決まっていなければ、<br>
-              were.からご提案します。
-            </p>
-
-          </article>
-
-
-          <article class="flow-step" data-step="4">
-
-            <p class="flow-number">
-              04 — BUILD
-            </p>
-
-            <h3>
-              つくる。
-            </h3>
-
-            <p>
-              PC・スマートフォンで快適に使える<br>
-              Webサイトに仕上げます。
-            </p>
-
-          </article>
-
-
-          <article class="flow-step" data-step="5">
-
-            <p class="flow-number">
-              05 — REVIEW
-            </p>
-
-            <h3>
-              整える。
-            </h3>
-
-            <p>
-              実際の画面を見ながら、<br>
-              細かな部分を調整します。
-            </p>
-
-          </article>
-
-
-          <article class="flow-step" data-step="6">
-
-            <p class="flow-number">
-              06 — PUBLISH & SUPPORT
-            </p>
-
-            <h3>
-              届ける。
-            </h3>
-
-            <p>
-              ドメイン設定から公開まで。<br>
-              公開後の保守にも対応します。
-            </p>
-
-          </article>
-
+    <section id="price" class="price theme-dark" data-header-theme="dark">
+      <div class="shell section-pad">
+        <div class="price-head"><div><p class="eyebrow">04 — PRICE</p><h2>必要なものを、<br>必要なぶんだけ。</h2></div><p>表示価格は税込です。内容をお聞きしたうえで、制作前にお見積もりします。</p></div>
+        <div class="price-list">
+          <article class="price-item"><button class="price-trigger" type="button" aria-expanded="false" aria-controls="price-light"><span>LIGHT</span><strong>¥69,800〜</strong><i aria-hidden="true"></i></button><div class="price-panel" id="price-light"><div><p>名刺代わりになるWebサイトや、必要な情報をコンパクトにまとめたい方向け。</p><ul><li>スマートフォン対応</li><li>オリジナルデザイン</li><li>基本SEO・OGP設定</li><li>お問い合わせ・SNSなどへの導線</li><li>ドメイン接続・公開サポート</li></ul></div></div></article>
+          <article class="price-item"><button class="price-trigger" type="button" aria-expanded="false" aria-controls="price-standard"><span>STANDARD</span><strong>¥99,800〜</strong><i aria-hidden="true"></i></button><div class="price-panel" id="price-standard"><div><p>構成や見せ方から考え、事業やお店の雰囲気までしっかり伝えたい方向け。</p><ul><li>LIGHTの内容</li><li>サイト構成の設計</li><li>写真を活かしたレイアウト</li><li>細かなレスポンシブ調整</li><li>必要な導線設計</li></ul></div></div></article>
+          <article class="price-item"><button class="price-trigger" type="button" aria-expanded="false" aria-controls="price-custom"><span>CUSTOM</span><strong>¥149,800〜</strong><i aria-hidden="true"></i></button><div class="price-panel" id="price-custom"><div><p>一般的なWebサイトの形に収まらない、機能や構成が必要な方向け。</p><ul><li>STANDARDの内容</li><li>予約導線・フォーム</li><li>独自の動きや機能</li><li>ページ数の多い構成</li><li>内容に応じた個別設計</li></ul></div></div></article>
+          <article class="price-item"><button class="price-trigger" type="button" aria-expanded="false" aria-controls="price-maintenance"><span>MAINTENANCE</span><strong>¥3,300 / month</strong><i aria-hidden="true"></i></button><div class="price-panel" id="price-maintenance"><div><p>サイト公開後の軽微な更新や、日々の管理をサポートします。</p><ul><li>テキストの軽微な変更</li><li>画像・リンク先の差し替え</li><li>表示・動作確認</li><li>軽微な不具合修正</li><li>月30分程度までの更新作業</li></ul><small>新しいページ、レイアウト変更、機能追加は別途お見積もり。ドメイン・サーバー等の利用料金は含みません。</small></div></div></article>
         </div>
-
-
-        <div class="flow-preview">
-
-          <div class="flow-browser" data-stage="1">
-
-            <div class="browser-bar">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-            <div class="browser-content">
-
-              <p class="preview-start">
-                START
-              </p>
-
-              <div class="preview-header" data-wire="HEADER / NAV">
-                <div class="preview-logo">
-                  were.
-                </div>
-
-                <div class="preview-nav" aria-hidden="true">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
-
-              <div class="preview-hero" data-wire="HERO / TEXT / CTA">
-                <div class="preview-line preview-line-large"></div>
-
-                <div class="preview-line"></div>
-
-                <div class="preview-line preview-line-short"></div>
-
-                <div class="preview-button"></div>
-              </div>
-
-              <div class="preview-image" data-wire="IMAGE"></div>
-
-              <div class="preview-section" data-wire="SECTION">
-                <span></span>
-                <span></span>
-              </div>
-
-              <p class="preview-status">
-                LIVE
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
+        <div class="system-price"><p class="service-en">RESERVATION / CUSTOMER MANAGEMENT</p><div><h3>予約機能・顧客管理</h3><p>既存の簡易な予約機能・システム連携は ¥16,500〜。独自予約システムや顧客管理・カルテは、必要な機能と運用範囲に応じて個別にお見積もりします。</p></div><a class="text-link text-link-light" href="#contact">相談する <span>↗</span></a></div>
+        <p class="price-note">ALL PRICES INCLUDE TAX. / DOMAIN &amp; EXTERNAL SERVICE FEES ARE NOT INCLUDED.</p>
       </div>
-
     </section>
 
-
-    <!-- ========================
-         06 — PROFILE
-    ========================= -->
-    <section id="profile" class="profile section">
-
-      <p class="section-number">
-        06 — PROFILE
-      </p>
-
-      <div class="profile-layout">
-
-        <div class="profile-image">
-          <img src="images/IMG_0344.jpg" alt="Yoshi Miyamoto">
-        </div>
-
-
-        <div class="profile-content">
-
-          <button
-            class="profile-trigger"
-            type="button"
-            aria-expanded="false"
-            aria-controls="profile-details"
-          >
-            <span class="profile-name">Yoshi Miyamoto</span>
-
-            <span class="profile-role">DESIGNER / DIRECTOR</span>
-          </button>
-
-          <div class="profile-panel" id="profile-details" aria-hidden="true">
-            <div class="profile-panel-inner">
-              <div class="profile-text">
-
-                <p>
-                  京都を拠点に、were.として<br>
-                  Webサイトを制作しています。
-                </p>
-
-                <p>
-                  以前はカメラマンとして、<br>
-                  人やお店、それぞれが持つ空気をどう残すかを<br>
-                  考えながら仕事をしていました。
-                </p>
-
-                <p>
-                  Webサイトも、少し似ていると思っています。
-                </p>
-
-                <p>
-                  きれいにつくることだけではなく、<br>
-                  その仕事のことを知って、<br>
-                  その人らしさが伝わるかたちを考える。
-                </p>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-
+    <section id="contact" class="contact theme-light" data-header-theme="light">
+      <div class="shell section-pad">
+        <p class="eyebrow">05 — CONTACT</p>
+        <div class="contact-content"><h2>まだ、何をしたらいいか<br>分からない。</h2><div><p>Webサイトを作りたい。今あるサイトを少し良くしたい。予約や顧客管理を、お店に合う形に整えたい。</p><p class="contact-lead">まずは、気軽にご相談ください。</p><a href="mailto:were.kyoto@gmail.com" class="button button-dark">制作についてメールで相談する</a><p class="contact-mail">were.kyoto@gmail.com</p></div></div>
       </div>
-
     </section>
-
-
-    <!-- ========================
-         07 — CONTACT
-    ========================= -->
-    <section id="contact" class="contact section">
-
-      <p class="section-number">
-        07 — CONTACT
-      </p>
-
-      <div class="contact-content">
-
-        <h2>
-          Let’s talk.
-        </h2>
-
-        <p>
-          Webサイトを作りたい。<br>
-          今あるサイトを少し良くしたい。<br>
-          まだ、何をしたらいいか分からない。
-        </p>
-
-        <p>
-          まずは、気軽にご相談ください。
-        </p>
-
-        <a
-          href="mailto:were.kyoto@gmail.com"
-          class="contact-link"
-        >
-          CONTACT BY EMAIL ↗
-        </a>
-
-      </div>
-
-    </section>
-
   </main>
-
-
-  <!-- ========================
-       FOOTER
-  ========================= -->
-  <footer class="footer">
-
-    <a href="#top" class="footer-logo">
-      <img src="logo/were-logo-dark.svg" alt="were.">
-    </a>
-
-    <p>
-      © 2026 were.
-    </p>
-
-  </footer>
-
-
+  <footer class="footer"><a href="#top"><img src="logo/were-logo-white.svg.svg" alt="were."></a><p>KYOTO / WEB DESIGN &amp; SYSTEM</p><p>© 2026 were.</p></footer>
   <script src="script.js"></script>
-
 </body>
-
 </html>
