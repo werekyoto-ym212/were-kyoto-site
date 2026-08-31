@@ -1,0 +1,21 @@
+# Content-hashed files only. Never overwrite an existing /assets/ filename.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Existing fixed-name assets remain mutable; a bounded cache avoids year-long staleness.
+/images/*
+  Cache-Control: public, max-age=86400, must-revalidate
+/logo/*
+  Cache-Control: public, max-age=86400, must-revalidate
+/favicon/*
+  Cache-Control: public, max-age=86400, must-revalidate
+/style.css
+  Cache-Control: public, max-age=3600, must-revalidate
+/script.js
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# HTML must discover new content hashes promptly.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate

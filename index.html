@@ -16,8 +16,13 @@
   <meta property="og:description" content="京都の店舗・個人サロンへ。ホームページ制作から独自予約システム、顧客管理・カルテまで、お店に合わせて設計します。">
   <meta property="og:url" content="https://were-kyoto.com/">
   <meta property="og:image" content="https://were-kyoto.com/images/ogp.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="were.">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="were. | 京都のWeb制作・独自予約システム">
+  <meta name="twitter:description" content="京都の店舗・個人サロンへ。ホームページ制作から独自予約システム、顧客管理・カルテまで、お店に合わせて設計します。">
+  <meta name="twitter:image" content="https://were-kyoto.com/images/ogp.jpg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -25,6 +30,24 @@
     "name": "were.",
     "url": "https://were-kyoto.com/",
     "email": "were.kyoto@gmail.com",
+    "priceRange": "Webサイト制作 ¥69,800〜（税込）",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "制作のご相談",
+      "email": "were.kyoto@gmail.com",
+      "availableLanguage": "ja"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "制作・保守プラン（税込）",
+      "itemListElement": [
+        {"@type":"Offer","name":"LIGHT","url":"https://were-kyoto.com/#price","priceSpecification":{"@type":"PriceSpecification","minPrice":69800,"priceCurrency":"JPY","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"LIGHT — Webサイト制作"}},
+        {"@type":"Offer","name":"STANDARD","url":"https://were-kyoto.com/#price","priceSpecification":{"@type":"PriceSpecification","minPrice":99800,"priceCurrency":"JPY","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"STANDARD — Webサイト制作"}},
+        {"@type":"Offer","name":"CUSTOM","url":"https://were-kyoto.com/#price","priceSpecification":{"@type":"PriceSpecification","minPrice":149800,"priceCurrency":"JPY","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"CUSTOM — Webサイト制作"}},
+        {"@type":"Offer","name":"MAINTENANCE","url":"https://were-kyoto.com/#price","priceSpecification":{"@type":"UnitPriceSpecification","price":3300,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"MAINTENANCE — サイト保守","description":"月30分程度までの更新作業。ドメイン・サーバー等の利用料金は含みません。"}},
+        {"@type":"Offer","name":"既存の簡易な予約機能・システム連携","url":"https://were-kyoto.com/#price","priceSpecification":{"@type":"PriceSpecification","minPrice":16500,"priceCurrency":"JPY","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"既存の簡易な予約機能・システム連携","description":"独自予約システムや顧客管理・カルテは個別見積もり。"}}
+      ]
+    },
     "areaServed": { "@type": "AdministrativeArea", "name": "京都府" },
     "description": "京都を拠点に、店舗・個人サロンのWebサイト制作、独自予約システム、顧客管理・カルテを設計・制作します。",
     "serviceType": [
@@ -44,8 +67,8 @@
 <body>
   <header class="header" data-header>
     <a href="#top" class="header-logo" aria-label="were. トップへ">
-      <img class="logo-dark" src="logo/were-logo-dark.svg" alt="were.">
-      <img class="logo-light" src="logo/were-logo-white.svg.svg" alt="" aria-hidden="true">
+      <img class="logo-dark" src="logo/were-logo-dark.svg" alt="were." width="118" height="17">
+      <img class="logo-light" src="logo/were-logo-white.svg" alt="" aria-hidden="true" width="126" height="25">
     </a>
     <nav id="main-nav" class="header-nav" aria-label="メインナビゲーション">
       <a href="#service">SERVICE</a><a href="#case">CASE</a><a href="#about">ABOUT</a><a href="#price">PRICE</a><a href="#contact">CONTACT</a>
@@ -56,15 +79,27 @@
   <main id="top">
     <section class="hero theme-dark" data-header-theme="dark">
       <div class="hero-slides" aria-hidden="true">
-        <img src="images/ccccc.jpg" alt="" class="hero-slide hero-slide-first" width="1814" height="1200" fetchpriority="high">
-        <img src="images/top.jpg" alt="" class="hero-slide hero-slide-second" width="1813" height="1205" loading="lazy">
-        <img src="images/top２.jpg" alt="" class="hero-slide hero-slide-third" width="1821" height="1203" loading="lazy">
+        <picture class="hero-slide hero-slide-first">
+          <source type="image/avif" srcset="assets/hero-1-960.281efca74bf6.avif 960w, assets/hero-1-1440.fb4d1e3867a3.avif 1440w, assets/hero-1-1814.d4b5003732f8.avif 1814w" sizes="max(100vw, 150svh)">
+          <source type="image/webp" srcset="assets/hero-1-960.02f7e097412d.webp 960w, assets/hero-1-1440.8323c28328c7.webp 1440w, assets/hero-1-1814.e831eef99545.webp 1814w" sizes="max(100vw, 150svh)">
+          <img src="images/ccccc.jpg" alt="" width="1814" height="1200" fetchpriority="high" loading="eager">
+        </picture>
+        <picture class="hero-slide hero-slide-second">
+          <source type="image/avif" srcset="assets/hero-2-960.981eec47ef8f.avif 960w, assets/hero-2-1440.82ce959073c1.avif 1440w, assets/hero-2-1814.136744fe38c3.avif 1813w" sizes="max(100vw, 150svh)">
+          <source type="image/webp" srcset="assets/hero-2-960.92eec362d421.webp 960w, assets/hero-2-1440.e613e6e11951.webp 1440w, assets/hero-2-1814.57658f8885e9.webp 1813w" sizes="max(100vw, 150svh)">
+          <img src="images/top.jpg" alt="" width="1813" height="1205" fetchpriority="low" loading="lazy" decoding="async">
+        </picture>
+        <picture class="hero-slide hero-slide-third">
+          <source type="image/avif" srcset="assets/hero-3-960.12f7fed99b46.avif 960w, assets/hero-3-1440.d9a688a426d0.avif 1440w, assets/hero-3-1814.25a5b18b5082.avif 1814w" sizes="max(100vw, 150svh)">
+          <source type="image/webp" srcset="assets/hero-3-960.db2c01e7c9ff.webp 960w, assets/hero-3-1440.cad18cb1bef9.webp 1440w, assets/hero-3-1814.47e71c8a6171.webp 1814w" sizes="max(100vw, 150svh)">
+          <img src="images/top２.jpg" alt="" width="1821" height="1203" fetchpriority="low" loading="lazy" decoding="async">
+        </picture>
       </div>
       <div class="hero-shade"></div>
       <div class="hero-content shell">
         <p class="eyebrow">WEB DESIGN &amp; SYSTEM / KYOTO</p>
         <h1>京都の店舗・個人サロン向け<br>Web制作・予約システム</h1>
-        <p class="hero-copy">Webサイトも、予約の仕組みも。<br>お店に合わせて、ひとつずつ。</p>
+        <p class="hero-copy">Webサイトも、予約の<span class="keep-word">仕組みも。</span><br>お店に合わせて、<span class="keep-word">ひとつずつ。</span></p>
         <p class="hero-sub">京都を拠点に、Webサイト制作から独自予約システム、顧客管理まで。<br>見た目だけで終わらない、お店のためのWebをつくります。</p>
         <div class="hero-actions"><a class="button button-light" href="#contact">制作について相談する</a><a class="text-link text-link-light" href="#case">制作事例を見る <span>↓</span></a></div>
       </div>
@@ -127,11 +162,11 @@
     <section id="contact" class="contact theme-light" data-header-theme="light">
       <div class="shell section-pad">
         <p class="eyebrow">05 — CONTACT</p>
-        <div class="contact-content"><h2>まだ、何をしたらいいか<br>分からない。</h2><div><p>Webサイトを作りたい。今あるサイトを少し良くしたい。予約や顧客管理を、お店に合う形に整えたい。</p><p class="contact-lead">まずは、気軽にご相談ください。</p><a href="mailto:were.kyoto@gmail.com" class="button button-dark">制作についてメールで相談する</a><p class="contact-mail">were.kyoto@gmail.com</p></div></div>
+        <div class="contact-content"><h2>まだ、何をしたらいいか<br>分からない。</h2><div><p>Webサイトを作りたい。今あるサイトを少し良くしたい。予約や顧客管理を、お店に合う形に整えたい。</p><p class="contact-lead">まずは、気軽にご相談ください。</p><a href="mailto:were.kyoto@gmail.com?subject=Web%E5%88%B6%E4%BD%9C%E3%83%BB%E4%BA%88%E7%B4%84%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&amp;body=were.%20%E3%81%94%E6%8B%85%E5%BD%93%E8%80%85%E6%A7%98%0D%0A%0D%0A%E4%BB%A5%E4%B8%8B%E3%81%AE%E5%86%85%E5%AE%B9%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%8F%E3%80%81%E3%81%94%E9%80%A3%E7%B5%A1%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%0D%0A%0D%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E5%BA%97%E8%88%97%E3%83%BB%E4%BA%8B%E6%A5%AD%E5%90%8D%EF%BC%9A%0D%0A%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E6%99%82%E6%9C%9F%EF%BC%9A%0D%0A%0D%0A%E3%82%88%E3%82%8D%E3%81%97%E3%81%8F%E3%81%8A%E9%A1%98%E3%81%84%E3%81%84%E3%81%9F%E3%81%97%E3%81%BE%E3%81%99%E3%80%82" class="button button-dark">制作についてメールで相談する</a><p class="contact-mail">were.kyoto@gmail.com</p></div></div>
       </div>
     </section>
   </main>
-  <footer class="footer"><a href="#top"><img src="logo/were-logo-white.svg.svg" alt="were."></a><p>KYOTO / WEB DESIGN &amp; SYSTEM</p><p>© 2026 were.</p></footer>
+  <footer class="footer"><a href="#top"><img src="logo/were-logo-white.svg" alt="were." width="126" height="25"></a><p>KYOTO / WEB DESIGN &amp; SYSTEM</p><p>© 2026 were.</p></footer>
   <script src="script.js"></script>
 </body>
 </html>

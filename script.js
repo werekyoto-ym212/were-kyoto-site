@@ -3,11 +3,12 @@ const headerNav = document.querySelector(".header-nav");
 const header = document.querySelector("[data-header]");
 
 if (menuToggle && headerNav) {
-  const closeMenu = () => {
+  const closeMenu = (restoreFocus = false) => {
     menuToggle.setAttribute("aria-expanded", "false");
     menuToggle.setAttribute("aria-label", "メニューを開く");
     headerNav.classList.remove("is-open");
     document.body.classList.remove("menu-open");
+    if (restoreFocus) menuToggle.focus();
   };
   menuToggle.addEventListener("click", () => {
     const willOpen = menuToggle.getAttribute("aria-expanded") !== "true";
@@ -16,15 +17,35 @@ if (menuToggle && headerNav) {
     headerNav.classList.toggle("is-open", willOpen);
     document.body.classList.toggle("menu-open", willOpen);
   });
-  headerNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
-  document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeMenu(); });
+  headerNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => closeMenu()));
+  document.addEventListener("keydown", (event) => {
+    if (menuToggle.getAttribute("aria-expanded") !== "true") return;
+    if (event.key === "Escape") closeMenu(true);
+    if (event.key === "Tab") {
+      const links = [...headerNav.querySelectorAll("a")];
+      const focusable = [...links, menuToggle];
+      const current = focusable.indexOf(document.activeElement);
+      event.preventDefault();
+      focusable[(current + (event.shiftKey ? -1 : 1) + focusable.length) % focusable.length].focus();
+    }
+  });
+  window.matchMedia("(max-width: 800px)").addEventListener("change", () => closeMenu());
 }
 
-document.querySelectorAll(".price-trigger").forEach((trigger) => {
+const priceTriggers = [...document.querySelectorAll(".price-trigger")];
+const setPriceExpanded = (trigger, expanded) => {
+  trigger.setAttribute("aria-expanded", String(expanded));
+  const panel = document.getElementById(trigger.getAttribute("aria-controls"));
+  if (panel) {
+    panel.inert = !expanded;
+    panel.setAttribute("aria-hidden", String(!expanded));
+  }
+};
+priceTriggers.forEach((trigger) => {
+  setPriceExpanded(trigger, false);
   trigger.addEventListener("click", () => {
     const willOpen = trigger.getAttribute("aria-expanded") !== "true";
-    document.querySelectorAll(".price-trigger").forEach((item) => item.setAttribute("aria-expanded", "false"));
-    trigger.setAttribute("aria-expanded", String(willOpen));
+    priceTriggers.forEach((item) => setPriceExpanded(item, item === trigger && willOpen));
   });
 });
 
