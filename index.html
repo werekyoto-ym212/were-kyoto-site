@@ -39,13 +39,11 @@
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "制作・保守プラン（税込）",
+      "name": "制作プラン（税込）",
       "itemListElement": [
-        {"@type":"Offer","name":"LIGHT","url":"https://were-kyoto.com/#price","priceSpecification":{"@type":"PriceSpecification","minPrice":69800,"priceCurrency":"JPY","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"LIGHT — Webサイト制作"}},
-        {"@type":"Offer","name":"STANDARD","url":"https://were-kyoto.com/#price","priceSpecification":{"@type":"PriceSpecification","minPrice":99800,"priceCurrency":"JPY","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"STANDARD — Webサイト制作"}},
-        {"@type":"Offer","name":"CUSTOM","url":"https://were-kyoto.com/#price","priceSpecification":{"@type":"PriceSpecification","minPrice":149800,"priceCurrency":"JPY","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"CUSTOM — Webサイト制作"}},
-        {"@type":"Offer","name":"MAINTENANCE","url":"https://were-kyoto.com/#price","priceSpecification":{"@type":"UnitPriceSpecification","price":3300,"priceCurrency":"JPY","unitText":"月","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"MAINTENANCE — サイト保守","description":"月30分程度までの更新作業。ドメイン・サーバー等の利用料金は含みません。"}},
-        {"@type":"Offer","name":"既存の簡易な予約機能・システム連携","url":"https://were-kyoto.com/#price","priceSpecification":{"@type":"PriceSpecification","minPrice":16500,"priceCurrency":"JPY","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"既存の簡易な予約機能・システム連携","description":"独自予約システムや顧客管理・カルテは個別見積もり。"}}
+        {"@type":"Offer","name":"WEBSITE","url":"https://were-kyoto.com/website/","priceSpecification":{"@type":"PriceSpecification","minPrice":69800,"priceCurrency":"JPY","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"WEBSITE","description":"その店や仕事らしさが伝わる、ホームページを。"}},
+        {"@type":"Offer","name":"RESERVATION SYSTEM","url":"https://were-kyoto.com/reservation/","priceSpecification":{"@type":"PriceSpecification","minPrice":198000,"priceCurrency":"JPY","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"RESERVATION SYSTEM","description":"予約受付から管理まで、お店に合わせてひとつに。"}},
+        {"@type":"Offer","name":"WEBSITE + RESERVATION","url":"https://were-kyoto.com/#price","priceSpecification":{"@type":"PriceSpecification","minPrice":248000,"priceCurrency":"JPY","valueAddedTaxIncluded":true},"itemOffered":{"@type":"Service","name":"WEBSITE + RESERVATION","description":"ホームページから、そのまま予約まで。セットで整えます。"}}
       ]
     },
     "areaServed": { "@type": "AdministrativeArea", "name": "京都府" },
@@ -142,12 +140,22 @@
       <div class="shell section-pad">
         <div class="price-head"><div><p class="eyebrow">04 — PRICE</p><h2>必要なものを、<br>必要なぶんだけ。</h2></div><p>表示価格は税込です。内容をお聞きしたうえで、制作前にお見積もりします。</p></div>
         <div class="price-list">
-          <article class="price-item"><button class="price-trigger" type="button" aria-expanded="false" aria-controls="price-light"><span>LIGHT</span><strong>¥69,800〜</strong><i aria-hidden="true"></i></button><div class="price-panel" id="price-light"><div><p>名刺代わりになるWebサイトや、必要な情報をコンパクトにまとめたい方向け。</p><ul><li>スマートフォン対応</li><li>オリジナルデザイン</li><li>基本SEO・OGP設定</li><li>お問い合わせ・SNSなどへの導線</li><li>ドメイン接続・公開サポート</li></ul></div></div></article>
-          <article class="price-item"><button class="price-trigger" type="button" aria-expanded="false" aria-controls="price-standard"><span>STANDARD</span><strong>¥99,800〜</strong><i aria-hidden="true"></i></button><div class="price-panel" id="price-standard"><div><p>構成や見せ方から考え、事業やお店の雰囲気までしっかり伝えたい方向け。</p><ul><li>LIGHTの内容</li><li>サイト構成の設計</li><li>写真を活かしたレイアウト</li><li>細かなレスポンシブ調整</li><li>必要な導線設計</li></ul></div></div></article>
-          <article class="price-item"><button class="price-trigger" type="button" aria-expanded="false" aria-controls="price-custom"><span>CUSTOM</span><strong>¥149,800〜</strong><i aria-hidden="true"></i></button><div class="price-panel" id="price-custom"><div><p>一般的なWebサイトの形に収まらない、機能や構成が必要な方向け。</p><ul><li>STANDARDの内容</li><li>予約導線・フォーム</li><li>独自の動きや機能</li><li>ページ数の多い構成</li><li>内容に応じた個別設計</li></ul></div></div></article>
-          <article class="price-item"><button class="price-trigger" type="button" aria-expanded="false" aria-controls="price-maintenance"><span>MAINTENANCE</span><strong>¥3,300 / month</strong><i aria-hidden="true"></i></button><div class="price-panel" id="price-maintenance"><div><p>サイト公開後の軽微な更新や、日々の管理をサポートします。</p><ul><li>テキストの軽微な変更</li><li>画像・リンク先の差し替え</li><li>表示・動作確認</li><li>軽微な不具合修正</li><li>月30分程度までの更新作業</li></ul><small>新しいページ、レイアウト変更、機能追加は別途お見積もり。ドメイン・サーバー等の利用料金は含みません。</small></div></div></article>
+          <article class="price-item plan-row">
+            <h3 class="service-en">WEBSITE</h3>
+            <p class="plan-amount">¥69,800〜</p>
+            <div class="plan-summary"><p>その店や仕事らしさが伝わる、ホームページを。</p><a class="text-link text-link-light" href="/website/" aria-label="WEBSITEについて詳しく見る">詳しく見る <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="price-item plan-row">
+            <h3 class="service-en">RESERVATION SYSTEM</h3>
+            <p class="plan-amount">¥198,000〜</p>
+            <div class="plan-summary"><p>予約受付から管理まで、お店に合わせてひとつに。</p><a class="text-link text-link-light" href="/reservation/" aria-label="RESERVATION SYSTEMについて詳しく見る">詳しく見る <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="price-item plan-row">
+            <h3 class="service-en">WEBSITE + RESERVATION</h3>
+            <p class="plan-amount">¥248,000〜</p>
+            <div class="plan-summary"><p>ホームページから、そのまま予約まで。セットで整えます。</p><p class="plan-caption">セットの内容は、各サービスの詳細ページで。</p></div>
+          </article>
         </div>
-        <div class="system-price"><p class="service-en">RESERVATION / CUSTOMER MANAGEMENT</p><div><h3>予約機能・顧客管理</h3><p>既存の簡易な予約機能・システム連携は ¥16,500〜。独自予約システムや顧客管理・カルテは、必要な機能と運用範囲に応じて個別にお見積もりします。</p></div><a class="text-link text-link-light" href="#contact">相談する <span>↗</span></a></div>
         <p class="price-note">ALL PRICES INCLUDE TAX. / DOMAIN &amp; EXTERNAL SERVICE FEES ARE NOT INCLUDED.</p>
       </div>
     </section>
