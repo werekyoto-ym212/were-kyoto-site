@@ -65,3 +65,10 @@
 .service-detail .reservation-screen img{width:100%;height:auto}
 .service-detail .reservation-screen figcaption{margin-top:16px;font-size:12px;line-height:2;color:var(--ink-soft)}
 .service-detail .reservation-screen figcaption span{display:block;font-size:11px;opacity:.7}
+
+/* Home copy: wrap at phrase boundaries without changing type sizes. */
+.copy-line{display:block}
+@media(min-width:1200px){
+  .case-detail{grid-template-columns:max-content minmax(0,1fr)}
+  .contact-content:has(.copy-line){grid-template-columns:max-content minmax(0,1fr);gap:4vw}
+}
