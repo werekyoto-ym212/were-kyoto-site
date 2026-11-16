@@ -5,6 +5,13 @@ const TOPICS = new Set(["Webサイト", "予約システム", "顧客管理・�
 const BOOKING_METHODS = new Set(["", "Instagram DM", "LINE", "電話", "ホットペッパー", "その他"]);
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_BODY_BYTES = 32 * 1024;
+const RETIRED_PATHS = new Set([
+  "/website",
+  "/reservation",
+  "/case/sophie-kyoto",
+  "/contact",
+  "/thanks",
+]);
 
 const json = (body, status = 200) => new Response(JSON.stringify(body), {
   status,
@@ -115,7 +122,7 @@ async function contact(request, env) {
   }
   const validated = validateForm(form);
   if (validated.error) return json({ message: validated.error }, 400);
-  if (validated.data.website) return new Response(null, { status: 303, headers: { Location: "/thanks/", "Cache-Control": "no-store" } });
+  if (validated.data.website) return new Response(null, { status: 303, headers: { Location: "/", "Cache-Control": "no-store" } });
 
   let turnstileValid = false;
   try {
@@ -130,12 +137,19 @@ async function contact(request, env) {
   } catch {
     return json({ message: "送信できませんでした。入力内容は残っています。時間をおいて再度お試しください。" }, 502);
   }
-  return new Response(null, { status: 303, headers: { Location: "/thanks/", "Cache-Control": "no-store" } });
+  return new Response(null, { status: 303, headers: { Location: "/", "Cache-Control": "no-store" } });
 }
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const normalizedPath = url.pathname.length > 1 ? url.pathname.replace(/\/+$/, "") : url.pathname;
+    if (RETIRED_PATHS.has(normalizedPath)) {
+      return new Response(
+        "<!doctype html><html lang=\"ja\"><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>ページは終了しました | DIGIT.</title><main><h1>このページは終了しました</h1><p>お探しのページは公開を終了しています。</p><p><a href=\"/\">DIGIT. トップページへ</a></p></main></html>",
+        { status: 410, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" } },
+      );
+    }
     if (url.pathname === "/api/contact/config" && request.method === "GET") {
       if (!env.TURNSTILE_SITE_KEY) return json({ message: "設定が完了していません。" }, 503);
       return json({ sitekey: env.TURNSTILE_SITE_KEY });

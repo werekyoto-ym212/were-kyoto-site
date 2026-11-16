@@ -14,8 +14,20 @@
     "head_sampling_rate": 1
   },
   "assets": {
-    "directory": ".",
+    "directory": "./public",
     "binding": "ASSETS",
-    "run_worker_first": ["/api/*"]
+    "run_worker_first": [
+      "/api/*",
+      "/website",
+      "/website/",
+      "/reservation",
+      "/reservation/",
+      "/case/sophie-kyoto",
+      "/case/sophie-kyoto/",
+      "/contact",
+      "/contact/",
+      "/thanks",
+      "/thanks/"
+    ]
   }
 }

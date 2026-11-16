@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 260" role="img" aria-labelledby="title desc">
+  <title id="title">Digi</title>
+  <desc id="desc">DIGIT.の案内役。青と白を基調にした小さなロボット。</desc>
+  <defs>
+    <linearGradient id="shell" x1="48" y1="41" x2="190" y2="166" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/><stop offset="1" stop-color="#eaf7ff"/>
+    </linearGradient>
+    <linearGradient id="face" x1="64" y1="62" x2="177" y2="146" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e9f8ff"/><stop offset="1" stop-color="#d8f0fc"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="120" cy="244" rx="62" ry="9" fill="#cbdfea" opacity=".6"/>
+  <path d="M120 28v14" stroke="#5ba4ce" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="120" cy="20" r="8" fill="#83c9e9"/>
+  <rect x="43" y="43" width="154" height="119" rx="39" fill="url(#shell)" stroke="#a9d3e9" stroke-width="4"/>
+  <rect x="57" y="57" width="126" height="88" rx="29" fill="url(#face)"/>
+  <path d="M91 99c0-4.7 3.3-8 7.3-8s7.2 3.3 7.2 8-3.2 7.2-7.2 7.2-7.3-2.5-7.3-7.2Zm43 0c0-4.7 3.3-8 7.3-8s7.2 3.3 7.2 8-3.2 7.2-7.2 7.2-7.3-2.5-7.3-7.2Z" fill="#246a98"/>
+  <path d="M104 120c4.1 4.2 9.3 6.3 16 6.3s11.9-2.1 16-6.3" fill="none" stroke="#5ca5cc" stroke-width="4" stroke-linecap="round"/>
+  <path d="M42 96H27m171 0h15" stroke="#6aaed3" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="22" cy="96" r="6" fill="#91d1ec"/><circle cx="218" cy="96" r="6" fill="#91d1ec"/>
+  <path d="M67 166c16 10 34 15 53 15s37-5 53-15v35c0 13-10 23-23 23H90c-13 0-23-10-23-23v-35Z" fill="#69b8dd"/>
+  <path d="M98 178h44a8 8 0 0 1 0 16H98a8 8 0 0 1 0-16Z" fill="#e5f7ff"/>
+  <circle cx="120" cy="186" r="3.2" fill="#3a8eb8"/>
+  <path d="m68 188-15 18m119-18 15 18M91 226v12m58-12v12" fill="none" stroke="#4b99c2" stroke-width="10" stroke-linecap="round"/>
+  <path d="M69 71c8-10 20-15 35-15" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+</svg>

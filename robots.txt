@@ -1,1 +1,3 @@
+User-agent: *
+Allow: /
 Sitemap: https://were-kyoto.com/sitemap.xml

@@ -69,7 +69,7 @@ test("honeypot returns generic success without Turnstile or Resend calls", async
   try {
     const response = await worker.fetch(post(validForm({ website: "spam.example" })), env);
     assert.equal(response.status, 303);
-    assert.equal(response.headers.get("Location"), "/thanks/");
+    assert.equal(response.headers.get("Location"), "/");
     assert.equal(calls, 0);
   } finally {
     globalThis.fetch = originalFetch;
@@ -109,10 +109,27 @@ test("sends exactly once after valid Turnstile and returns 303 only on Resend su
   try {
     const response = await worker.fetch(post(), env);
     assert.equal(response.status, 303);
-    assert.equal(response.headers.get("Location"), "/thanks/");
+    assert.equal(response.headers.get("Location"), "/");
     assert.equal(urls.filter((url) => url.includes("api.resend.com")).length, 1);
   } finally {
     globalThis.fetch = originalFetch;
+  }
+});
+
+test("retires legacy WERE URLs with 410 without redirecting to DIGIT.", async () => {
+  for (const path of [
+    "/website/", "/website", "/reservation/", "/reservation",
+    "/case/sophie-kyoto/", "/case/sophie-kyoto", "/contact/", "/contact",
+    "/thanks/", "/thanks",
+  ]) {
+    let assetFetches = 0;
+    const response = await worker.fetch(new Request(`https://were-kyoto.com${path}`), {
+      ASSETS: { fetch: async () => { assetFetches += 1; return new Response("unexpected"); } },
+    });
+    assert.equal(response.status, 410, path);
+    assert.equal(response.headers.get("Location"), null, path);
+    assert.equal(assetFetches, 0, path);
+    assert.match(await response.text(), /このページは終了しました/);
   }
 });
 
